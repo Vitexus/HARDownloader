@@ -1,0 +1,14 @@
+{
+    "name": "vitexsoftware/mandala2",
+    "description": "Description of project Mandala2.",
+    "authors": [
+        {
+            "name": "Vitex",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vitexsoftware/ease-html": "dev-master"
+    }
+}
