@@ -8,7 +8,12 @@
         }
     ],
     "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "HAR\\": "src/HAR/"
+        }
+    },
     "require": {
-        "vitexsoftware/ease-html": "dev-master"
+        "vitexsoftware/ease-core": "dev-master"
     }
 }

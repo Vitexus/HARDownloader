@@ -41,6 +41,7 @@ if ($himalayanartUrl) {
         $opage->addItem(new Ease\Html\ImgTag('img/big.png'));
     } else {
         $opage->addItem('sorry :(');
+        $opage->addItem('<pre>'.($mainpage).'</pre>');
     }
 } else {
     $selForm = new Ease\Html\Form('Mandala');
