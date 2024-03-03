@@ -12,4 +12,6 @@ $downloader = new Har();
 $downloader->debug = false;
 $downloader->logBanner();
 
-do {  $downloader->obtain(++$itemid); } while (true);
+do {
+    $downloader->obtain(++$itemid);
+} while (true);

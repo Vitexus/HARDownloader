@@ -1,5 +1,5 @@
 {
-    "name": "vitexsoftware/mandala2",
+    "name": "vitexsoftware/hardownloader",
     "description": "Description of project Mandala2.",
     "authors": [
         {
@@ -13,7 +13,10 @@
             "HAR\\": "src/HAR/"
         }
     },
+    "bin": ["src/downloader.php"],
     "require": {
-        "vitexsoftware/ease-core": "dev-master"
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "vitexsoftware/ease-core": "dev-main"
     }
 }
