@@ -12,6 +12,6 @@ Rules-Requires-Root: no
 Package: hardownloader
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends},  php-vitexsoftware-ease-core, php-cli, composer-debian
+Depends: ${misc:Depends},  php-vitexsoftware-ease-core, php-cli, composer-debian, php-curl, php-gd
 Description: Himalayan Art Resources image downloader
  Download one or all full size images Himalayan Art Resources website
