@@ -10,7 +10,7 @@ Rules-Requires-Root: no
 #Vcs-Browser: https://salsa.debian.org/debian/hardownloader
 
 Package: hardownloader
-Architecture: any
+Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},  php-vitexsoftware-ease-core, php-cli, composer-debian, php-curl, php-gd
 Description: Himalayan Art Resources image downloader

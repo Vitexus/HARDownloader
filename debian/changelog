@@ -1,6 +1,10 @@
-hardownloader (0.1.3) UNRELEASED; urgency=low
+hardownloader (1.1.1) UNRELEASED; urgency=low
 
+  [ Vítězslav Dvořák ]
   * Initial release. Closes: #nnnn
     <nnnn is the bug number of your ITP>
 
- -- Vítězslav Dvořák <info@vitexsoftware.cz>  Tue, 05 Mar 2024 02:22:49 +0100
+  [ vitex ]
+  * release
+
+ -- vitex <info@vitexsoftware.cz>  Tue, 05 Mar 2024 03:13:14 +0100
