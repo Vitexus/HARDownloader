@@ -1,0 +1,6 @@
+debian/conf/composer.json       usr/lib/hardownloader/
+src/*			        usr/lib/hardownloader/
+src/HAR/*		        usr/lib/hardownloader/HAR
+bin/*                           usr/bin/
+hardownloader.svg           usr/share/icons/hicolor/scalable/apps/
+#io.github.vitexsoftware.hardownloader.desktop usr/share/applications/

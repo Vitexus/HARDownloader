@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'| sed 's/~.*//' `'"' debian/conf/composer.json |sponge debian/conf/composer.json
+	dh_install
+	sed -i -e 's/..\/vendor/\/var\/lib\/composer\/hardownloader/g' 	             debian/hardownloader/usr/lib/hardownloader/*.php
+	sed -i -e 's/..\/.env//'                                                     debian/hardownloader/usr/lib/hardownloader/*.php

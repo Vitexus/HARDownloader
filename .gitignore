@@ -1,0 +1,8 @@
+/vendor/
+/hardownloader.phar
+/.env
+/debian/.debhelper/
+/debian/hardownloader/
+/debian/debhelper-build-stamp
+/debian/files
+.ex

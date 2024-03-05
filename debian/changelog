@@ -1,0 +1,6 @@
+hardownloader (0.1.3) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Tue, 05 Mar 2024 02:22:49 +0100

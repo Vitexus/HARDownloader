@@ -1,4 +1,8 @@
+![Har Logo](hardownloader.svg?raw=true)
+
 # HAR Downloader
+
+
 
 usage: downloader.php <command> [<options>]
 

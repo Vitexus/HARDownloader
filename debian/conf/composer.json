@@ -1,0 +1,32 @@
+{
+  "name": "vitexsoftware/hardownloader",
+  "description": "Description of project Mandala2.",
+  "version": "0.1.3",
+  "authors": [
+    {
+      "name": "Vitex",
+      "email": "info@vitexsoftware.cz"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "HAR\\": "./"
+    }
+  },
+  "require": {
+    "ext-curl": "*",
+    "ext-gd": "*",
+    "deb/ease-core": "*",
+    "vanilla/garden-cli": "dev-master"
+  },
+  "config": {
+    "vendor-dir": "/var/lib/hardownloader"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hardownloader
+Upstream-Contact: <preferred name and address to reach the upstream project>
+Source: <url://example.com>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     .env
+           .gitignore
+           README.md
+           composer.json
+           composer.lock
+           nbproject/configs/Downloader.properties
+           nbproject/configs/help.properties
+           nbproject/private/config.properties
+           nbproject/private/configs/Downloader.properties
+           nbproject/private/configs/help.properties
+           nbproject/private/private.properties
+           nbproject/project.properties
+           vendor/composer/installed.json
+           vendor/pear/console_getopt/.gitignore
+           vendor/pear/console_getopt/.travis.yml
+           vendor/pear/console_getopt/README.rst
+           vendor/pear/console_getopt/composer.json
+           vendor/pear/console_getopt/tests/001-getopt.phpt
+           vendor/pear/console_getopt/tests/bug10557.phpt
+           vendor/pear/console_getopt/tests/bug11068.phpt
+           vendor/pear/console_getopt/tests/bug13140.phpt
+           vendor/pear/mail/README.rst
+           vendor/pear/mail/composer.json
+           vendor/pear/mail_mime/README
+           vendor/pear/mail_mime/composer.json
+           vendor/pear/pear-core-minimal/README.rst
+           vendor/pear/pear-core-minimal/composer.json
+           vendor/pear/pear_exception/composer.json
+           vendor/psr/log/README.md
+           vendor/psr/log/composer.json
+           vendor/vanilla/garden-cli/.editorconfig
+           vendor/vanilla/garden-cli/.github/workflows/ci.yml
+           vendor/vanilla/garden-cli/.gitignore
+           vendor/vanilla/garden-cli/.travis.yml
+           vendor/vanilla/garden-cli/README.md
+           vendor/vanilla/garden-cli/composer.json
+           vendor/vitexsoftware/ease-core/.github/FUNDING.yml
+           vendor/vitexsoftware/ease-core/.github/dependabot.yml
+           vendor/vitexsoftware/ease-core/.github/workflows/packaging.yml
+           vendor/vitexsoftware/ease-core/.github/workflows/testing.yml
+           vendor/vitexsoftware/ease-core/.vscode/settings.json
+           vendor/vitexsoftware/ease-core/Examples/SendTestMail.php
+           vendor/vitexsoftware/ease-core/Examples/debian/composer.json
+           vendor/vitexsoftware/ease-core/Examples/debian/debianized.php
+           vendor/vitexsoftware/ease-core/Makefile
+           vendor/vitexsoftware/ease-core/README.md
+           vendor/vitexsoftware/ease-core/Vagrantfile
+           vendor/vitexsoftware/ease-core/bootstrap-centos.sh
+           vendor/vitexsoftware/ease-core/codeception.yml
+           vendor/vitexsoftware/ease-core/composer.json
+           vendor/vitexsoftware/ease-core/debian/Jenkinsfile
+           vendor/vitexsoftware/ease-core/debian/README.Debian
+           vendor/vitexsoftware/ease-core/debian/compat
+           vendor/vitexsoftware/ease-core/debian/composer.json
+           vendor/vitexsoftware/ease-core/debian/ease-mailer-test
+           vendor/vitexsoftware/ease-core/debian/fixversion.sh
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core-dev.install
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core-dev.links
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core-dev.postinst
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core-doc.conf
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core-doc.install
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core.install
+           vendor/vitexsoftware/ease-core/debian/php-vitexsoftware-ease-core.postinst
+           vendor/vitexsoftware/ease-core/debian/rules
+           vendor/vitexsoftware/ease-core/debian/source/format
+           vendor/vitexsoftware/ease-core/debian/tests/composer.json
+           vendor/vitexsoftware/ease-core/ease-core-social-preview.png
+           vendor/vitexsoftware/ease-core/ease-core.dsc
+           vendor/vitexsoftware/ease-core/i18n/cs_CZ/LC_MESSAGES/php-vitexsoftware-ease-core.mo
+           vendor/vitexsoftware/ease-core/i18n/cs_CZ/LC_MESSAGES/php-vitexsoftware-ease-core.po
+           vendor/vitexsoftware/ease-core/i18n/en_US/LC_MESSAGES/php-vitexsoftware-ease-core.mo
+           vendor/vitexsoftware/ease-core/i18n/en_US/LC_MESSAGES/php-vitexsoftware-ease-core.po
+           vendor/vitexsoftware/ease-core/i18n/eo/LC_MESSAGES/php-vitexsoftware-ease-core.mo
+           vendor/vitexsoftware/ease-core/i18n/eo/LC_MESSAGES/php-vitexsoftware-ease-core.po
+           vendor/vitexsoftware/ease-core/project-logo.png
+           vendor/vitexsoftware/ease-core/project-logo.xcf
+           vendor/vitexsoftware/ease-core/release.sh
+           vendor/vitexsoftware/ease-core/social-preview.xcf
+           vendor/vitexsoftware/ease-core/tests/.env
+           vendor/vitexsoftware/ease-core/tests/configtest.json
+           vendor/vitexsoftware/ease-core/tests/report.sh
+           vendor/vitexsoftware/ease-core/tests/runalltests.sh
+           vendor/vitexsoftware/ease-core/tests/unit.suite.yml
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   __NO_COPYRIGHT_NOR_LICENSE__
+
+Files:     vendor/vanilla/garden-cli/LICENSE.md
+Copyright: 2014-2016 Vanilla Forums Inc.
+License:   Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+Files:     vendor/vitexsoftware/ease-core/debian/copyright
+Copyright: 2013-2020 Vítězslav Dvořák (v.s.cz) License: MIT
+License:   __UNKNOWN__
+ License: MIT
+ On Debian systems the full text of the GNU General Public License can be found
+ in the `/usr/share/common-licenses/MIT' file.
+
+Files:     vendor/vitexsoftware/ease-core/Dockerfile
+Copyright: __NO_COPYRIGHT__ in: vendor/vitexsoftware/ease-core/Dockerfile
+License:   __UNKNOWN__
+ COPY src/ /usr/share/php/Ease
+ COPY debian/composer.json /usr/share/php/Ease/composer.json
+ COPY docs/  /usr/share/doc/ease-core/html
+
+Files:     vendor/vitexsoftware/ease-core/ease-core.spec
+Copyright: 2018 Vítězslav Dvořák <info@vitexsoftware.cz>
+License:   __UNKNOWN__
+ Please preserve changelog entries
+
+Files:     vendor/vitexsoftware/ease-core/debian/control
+Copyright: __NO_COPYRIGHT__ in: vendor/vitexsoftware/ease-core/debian/control
+License:   __UNKNOWN__
+ Package: php-vitexsoftware-ease-core
+ Depends: ${misc:Depends}, php-mail, php-mail-mime, composer-debian, php-intl
+ Conflicts: ease-framework
+ Architecture: all
+ Suggests: php-vitexsoftware-ease-html, php-vitexsoftware-ease-bootstrap, php-vitexsoftware-ease-bootstrap4
+ Section: web
+ Priority: optional
+ Description: EasePHP Framework Core
+ common classes for Ease Framework.
+ .
+ Package: php-vitexsoftware-ease-core-dev
+ Pre-Depends: default-mta | postfix | exim4 | ssmtp | mail-transport-agent
+ Depends: ${misc:Depends}, php-mail, php-mail-mime, php-vitexsoftware-ease-core, phpunit,
+ Architecture: all
+ Suggests: php-vitexsoftware-ease-html, php-vitexsoftware-ease-bootstrap, php-vitexsoftware-ease-bootstrap4
+ Section: web
+ Priority: optional
+ Description: EasePHP Framework Unit Tests
+ Ease Framework Core unit Test classes.
+ .
+ Package: php-vitexsoftware-ease-core-doc
+ Depends: ${misc:Depends}
+ Architecture: all
+ Suggests: www-browser
+ Section: doc
+ Priority: optional
+ Description: EasePHP Framework Documentation
+ Ease Framework core documentation generate phpDocumentor
+
+#----------------------------------------------------------------------------
+# xml and html files (skipped):
+#         index.php
+#         nbproject/project.xml
+#         nbproject/private/private.xml
+#         src/downloader.php
+#         src/HAR/Har.php
+#         vendor/autoload.php
+#         vendor/vanilla/garden-cli/.phpcs.xml.dist
+#         vendor/vanilla/garden-cli/psalm.xml
+#         vendor/vanilla/garden-cli/phpunit.xml.dist
+#         vendor/vanilla/garden-cli/tests/TaskLoggerInterfaceTest.php
+#         vendor/vanilla/garden-cli/tests/LoggerInterfaceTest.php
+#         vendor/vanilla/garden-cli/tests/ArgsTest.php
+#         vendor/vanilla/garden-cli/tests/StreamLoggerInterfaceTest.php
+#         vendor/vanilla/garden-cli/tests/StreamLoggerTest.php
+#         vendor/vanilla/garden-cli/tests/AbstractCliTest.php
+#         vendor/vanilla/garden-cli/tests/TaskLoggerTest.php
+#         vendor/vanilla/garden-cli/tests/CliTest.php
+#         vendor/vanilla/garden-cli/tests/ReadmeTest.php
+#         vendor/vanilla/garden-cli/tests/Fixtures/RealCommand.php
+#         vendor/vanilla/garden-cli/tests/Fixtures/TestLogger.php
+#         vendor/vanilla/garden-cli/tests/Fixtures/TestCommands.php
+#         vendor/vanilla/garden-cli/tests/Fixtures/TestApplication.php
+#         vendor/vanilla/garden-cli/tests/Fixtures/Db.php
+#         vendor/vanilla/garden-cli/tests/App/IdentifierTest.php
+#         vendor/vanilla/garden-cli/tests/App/CliApplicationTest.php
+#         vendor/vanilla/garden-cli/src/StreamLogger.php
+#         vendor/vanilla/garden-cli/src/Cli.php
+#         vendor/vanilla/garden-cli/src/Args.php
+#         vendor/vanilla/garden-cli/src/TaskLogger.php
+#         vendor/vanilla/garden-cli/src/Table.php
+#         vendor/vanilla/garden-cli/src/Utility/DbUtils.php
+#         vendor/vanilla/garden-cli/src/Schema/OptSchema.php
+#         vendor/vanilla/garden-cli/src/Schema/CommandSchema.php
+#         vendor/vanilla/garden-cli/src/Schema/MetaTrait.php
+#         vendor/vanilla/garden-cli/src/Application/Identifier.php
+#         vendor/vanilla/garden-cli/src/Application/CliApplication.php
+#         vendor/vitexsoftware/ease-core/project-logo.svg
+#         vendor/vitexsoftware/ease-core/php-vitexsoftware-ease-core-dev.svg
+#         vendor/vitexsoftware/ease-core/php-vitexsoftware-ease-core-doc.svg
+#         vendor/vitexsoftware/ease-core/tests/Bootstrap.php
+#         vendor/vitexsoftware/ease-core/tests/configuration.xml
+#         vendor/vitexsoftware/ease-core/tests/BrickTester.php
+#         vendor/vitexsoftware/ease-core/tests/SandTester.php
+#         vendor/vitexsoftware/ease-core/tests/LoggingTester.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/MoleculeTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/FunctionsTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/LocaleTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/MailerTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/ExceptionTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/AtomTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/AnonymTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/RecordKeyTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/SharedTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/SandTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/BrickTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/UserTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToEmailTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToSyslogTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/RegentTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToFileTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToConsoleTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/MessageTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToMemoryTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToStdTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/ToEventlogTest.php
+#         vendor/vitexsoftware/ease-core/tests/src/Ease/Logger/LoggingTest.php
+#         vendor/vitexsoftware/ease-core/src/Ease/RecordKey.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Exception.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Brick.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Mailer.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Functions.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Atom.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Person.php
+#         vendor/vitexsoftware/ease-core/src/Ease/User.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Locale.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Sand.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Anonym.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Molecule.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Shared.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToStd.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/Loggingable.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToConsole.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToEventlog.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/Message.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToSyslog.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToEmail.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToMemory.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/Logging.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/ToFile.php
+#         vendor/vitexsoftware/ease-core/src/Ease/Logger/Regent.php
+#         vendor/vitexsoftware/ease-core/Examples/Logger/logToConsole.php
+#         vendor/vitexsoftware/ease-core/Examples/Logger/logToEmail.php
+#         vendor/vitexsoftware/ease-core/debian/tests/Bootstrap.php
+#         vendor/vitexsoftware/ease-core/debian/tests/phpunit.xml
+#         vendor/pear/pear_exception/PEAR/Exception.php
+#         vendor/pear/mail_mime/Mail/mimePart.php
+#         vendor/pear/mail_mime/Mail/mime.php
+#         vendor/pear/mail/Mail.php
+#         vendor/pear/mail/Mail/null.php
+#         vendor/pear/mail/Mail/mock.php
+#         vendor/pear/mail/Mail/RFC822.php
+#         vendor/pear/mail/Mail/sendmail.php
+#         vendor/pear/mail/Mail/mail.php
+#         vendor/pear/mail/Mail/smtpmx.php
+#         vendor/pear/mail/Mail/smtp.php
+#         vendor/pear/console_getopt/package.xml
+#         vendor/pear/console_getopt/Console/Getopt.php
+#         vendor/pear/pear-core-minimal/src/System.php
+#         vendor/pear/pear-core-minimal/src/PEAR.php
+#         vendor/pear/pear-core-minimal/src/PEAR/Error.php
+#         vendor/pear/pear-core-minimal/src/PEAR/ErrorStack.php
+#         vendor/pear/pear-core-minimal/src/OS/Guess.php
+#         vendor/composer/include_paths.php
+#         vendor/composer/autoload_static.php
+#         vendor/composer/autoload_classmap.php
+#         vendor/composer/autoload_real.php
+#         vendor/composer/platform_check.php
+#         vendor/composer/ClassLoader.php
+#         vendor/composer/autoload_namespaces.php
+#         vendor/composer/autoload_psr4.php
+#         vendor/composer/installed.php
+#         vendor/composer/InstalledVersions.php
+#         vendor/psr/log/src/LoggerAwareInterface.php
+#         vendor/psr/log/src/LoggerTrait.php
+#         vendor/psr/log/src/LoggerInterface.php
+#         vendor/psr/log/src/InvalidArgumentException.php
+#         vendor/psr/log/src/LogLevel.php
+#         vendor/psr/log/src/AbstractLogger.php
+#         vendor/psr/log/src/NullLogger.php
+#         vendor/psr/log/src/LoggerAwareTrait.php
+
+#----------------------------------------------------------------------------
+# huge files   (skipped):
+#         hardownloader.phar
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.
