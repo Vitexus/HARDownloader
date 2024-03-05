@@ -17,6 +17,7 @@
     "require": {
         "ext-curl": "*",
         "ext-gd": "*",
-        "vitexsoftware/ease-core": "dev-main"
+        "vitexsoftware/ease-core": "dev-main",
+        "vanilla/garden-cli": "dev-master"
     }
 }

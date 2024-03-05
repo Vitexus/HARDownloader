@@ -97,12 +97,10 @@ class Har extends \Ease\Brick
     /**
      *
      */
-    public function __construct()
+    public function __construct($doneDir)
     {
-        global $argv;
-        \Ease\Shared::init([], array_key_exists(1, $argv) ? $argv : (file_exists('.env') ? '.env' : '../.env'));
-        $this->tmpDir = \Ease\Shared::cfg('TMP_DIR', sys_get_temp_dir() . '/har');
-        $this->doneDir = \Ease\Shared::cfg('DONE_DIR', '.');
+        $this->tmpDir = \Ease\Shared::cfg('HAR_TMP_DIR', sys_get_temp_dir() . '/har');
+        $this->doneDir = $doneDir;
         $this->logger = new \Ease\Logger\Regent();
         $this->curlInit();
         if (file_exists($this->tmpDir) === false) {
@@ -139,13 +137,15 @@ class Har extends \Ease\Brick
     public function obtain($itemId)
     {
         if ($this->loadImagePage($itemId)) {
-            $this->addStatusMessage('downloading ' . "https://www.himalayanart.org/items/$itemId/images/primary");
+            if ($this->debug) {
+                $this->addStatusMessage('downloading ' . "https://www.himalayanart.org/items/$itemId/images/primary");
+            }
             if (
-                preg_match_all(
-                    '/https?\:\/\/[^\" ]+metadata\.json/i',
-                    $this->lastCurlResponse,
-                    $urls
-                )
+                    preg_match_all(
+                        '/https?\:\/\/[^\" ]+metadata\.json/i',
+                        $this->lastCurlResponse,
+                        $urls
+                    )
             ) {
                 file_put_contents(str_replace(
                     '.png',
@@ -209,14 +209,18 @@ class Har extends \Ease\Brick
         $retry = 0;
         while ($this->doCurlRequest($tileUrl) != 200) {
             if ($this->lastResponseCode == 404) {
-                $this->addStatusMessage($tileUrl . ' not found');
+                $this->addStatusMessage($tileUrl . ' not found', 'warning');
                 break;
             }
             if ($this->lastResponseCode == 403) {
-                $this->addStatusMessage($tileUrl . ' forbidden');
+                if ($this->debug) {
+                    $this->addStatusMessage($tileUrl . ' forbidden', 'debug');
+                }
                 break;
             }
-            $this->addStatusMessage('Retry ' . $retry++ . ' reason ' . $this->lastResponseCode);
+            if ($this->debug) {
+                $this->addStatusMessage('Retry ' . $retry++ . ' reason ' . $this->lastResponseCode);
+            }
         };
 
         if (strlen($this->lastResponseCode == 200)) {
@@ -225,8 +229,8 @@ class Har extends \Ease\Brick
             imagecopy($this->bigImage, $tile, $xpos, $ypos, 0, 0, 256, 256);
             unlink($tileTmp);
             $this->tileDone++;
-            $this->addStatusMessage('ItemID: ' . $itemId . ' Row ' . $y . ' of ' . $this->Yes . ' tile ' . $x . ' of ' . $this->Xes . ' (' . $this->tileDone . ' of ' . $this->tileCount . ') ' . basename($tileUrl));
             if ($this->debug) {
+                $this->addStatusMessage('ItemID: ' . $itemId . ' Row ' . $y . ' of ' . $this->Yes . ' tile ' . $x . ' of ' . $this->Xes . ' (' . $this->tileDone . ' of ' . $this->tileCount . ') ' . basename($tileUrl));
                 imagepng($this->bigImage, $this->targetImge($itemId));
             }
             return true;
