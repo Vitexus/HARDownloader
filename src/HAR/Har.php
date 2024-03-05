@@ -12,14 +12,14 @@ class Har extends \Ease\Brick
     /**
      * Curl Handle.
      *
-     * @var resource
+     * @var \CurlHandle
      */
     public $curl = null;
 
     /**
      * Informace o posledním HTTP requestu.
      *
-     * @var *
+     * @var array
      */
     public $curlInfo;
 
@@ -65,32 +65,32 @@ class Har extends \Ease\Brick
 
     /**
      *
-     * @var string
+     * @var int
      */
     private $tileDone;
 
     /**
      *
-     * @var int
+     * @var float
      */
     private $Xes;
 
     /**
      *
-     * @var int
+     * @var float
      */
     private $Yes;
 
     /**
      *
-     * @var type
+     * @var int
      */
     private $z;
     private $bigImage;
 
     /**
      *
-     * @var int
+     * @var float
      */
     private $tileCount;
 
@@ -124,11 +124,27 @@ class Har extends \Ease\Brick
         curl_setopt($this->curl, CURLOPT_VERBOSE, ($this->debug === true)); // For debugging
     }
 
-    public function addStatusMessage($message, $type = 'info', $addIcons = true)
+    /**
+     *
+     * @param string $message
+     * @param string $type
+     * @param mixed  $caller
+     *
+     * @return bool message shown
+     */
+    public function addStatusMessage($message, $type = 'info', $caller = null)
     {
         echo date('Y-m-d H:i:s') . ' ' . $message . "\n";
+        return true;
     }
 
+    /**
+     * Perform initial download
+     *
+     * @param int $itemId
+     *
+     * @return bool was good http response obtained ?
+     */
     public function loadImagePage($itemId)
     {
         return $this->doCurlRequest("https://www.himalayanart.org/items/$itemId/images/primary") == 200;
@@ -143,6 +159,7 @@ class Har extends \Ease\Brick
      */
     public function obtain($itemId)
     {
+        $result = null;
         if ($this->loadImagePage($itemId)) {
             if ($this->debug) {
                 $this->addStatusMessage('downloading ' . "https://www.himalayanart.org/items/$itemId/images/primary");
@@ -197,13 +214,14 @@ class Har extends \Ease\Brick
                         'ItemID: ' . $itemId . ' saved as  ' . realpath($this->doneDir . '/' . $itemId . '.png'),
                         'success'
                     );
-                    return true;
                 }
+                $result = true;
             }
         } else {
             $this->addStatusMessage('Json not found for ' . $itemId, 'warning');
-            return false;
+            $result = false;
         }
+        return $result;
     }
 
     /**
@@ -218,6 +236,7 @@ class Har extends \Ease\Brick
      */
     public function loadTile($itemId, $x, $y, $baseUrl)
     {
+        $result = false;
         $xpos = $x * 256;
         $ypos = $y * 256;
         $tileUrl = $baseUrl . $this->z . '/' . $x . '_' . $y . '.jpg';
@@ -240,7 +259,7 @@ class Har extends \Ease\Brick
             }
         };
 
-        if (strlen($this->lastResponseCode == 200)) {
+        if ($this->lastResponseCode == 200) {
             file_put_contents($tileTmp, $this->lastCurlResponse);
             $tile = imagecreatefromjpeg($tileTmp);
             imagecopy($this->bigImage, $tile, $xpos, $ypos, 0, 0, 256, 256);
@@ -248,10 +267,11 @@ class Har extends \Ease\Brick
             $this->tileDone++;
             if ($this->debug) {
                 $this->addStatusMessage('ItemID: ' . $itemId . ' Row ' . $y . ' of ' . $this->Yes . ' tile ' . $x . ' of ' . $this->Xes . ' (' . $this->tileDone . ' of ' . $this->tileCount . ') ' . basename($tileUrl));
-                imagepng($this->bigImage, $this->targetImge($itemId));
+                imagepng($this->bigImage, $this->targetImage($itemId));
             }
-            return true;
+            $result = true;
         }
+        return $result;
     }
 
     /**
