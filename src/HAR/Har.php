@@ -134,6 +134,13 @@ class Har extends \Ease\Brick
         return $this->doCurlRequest("https://www.himalayanart.org/items/$itemId/images/primary") == 200;
     }
 
+    /**
+     * Download image
+     *
+     * @param int $itemId
+     *
+     * @return bool
+     */
     public function obtain($itemId)
     {
         if ($this->loadImagePage($itemId)) {
@@ -187,7 +194,7 @@ class Har extends \Ease\Brick
                     }
                     imagepng($this->bigImage, $this->doneDir . '/' . $itemId . '.png');
                     $this->addStatusMessage(
-                        'ItemID: ' . $itemId . ' saved as  ' . 'img/' . $itemId . '.png',
+                        'ItemID: ' . $itemId . ' saved as  ' . realpath($this->doneDir . '/' . $itemId . '.png'),
                         'success'
                     );
                     return true;
@@ -199,6 +206,16 @@ class Har extends \Ease\Brick
         }
     }
 
+    /**
+     * Obtain one tile by coordinates
+     *
+     * @param int    $itemId  ID of tile
+     * @param int    $x       X position
+     * @param int    $y       Y position
+     * @param string $baseUrl base of tile url
+     *
+     * @return bool
+     */
     public function loadTile($itemId, $x, $y, $baseUrl)
     {
         $xpos = $x * 256;
